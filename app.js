@@ -83,7 +83,7 @@ $("#search-form").on("submit", async function handleSearch (evt) {
 
 async function getEpisodes(id) {
   // get episodes from tvmaze
-  const response = await axios.get(`http://api.tvmaze.com/shows/${id}/episodes`);
+  const response = await axios.get(`https://api.tvmaze.com/shows/${id}/episodes`);
   // return show ID and list of episodes with the episode name, season, and number
   let episodes = response.data.map(episode => ({
       id: episode.id,
